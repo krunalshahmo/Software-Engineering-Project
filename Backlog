@@ -1,0 +1,19 @@
+Top News Web App:
+______________________________________________________________________________
+ 
+Ideas:
+-Pulls data from selected sms feeds, twitter, web sites (maybe?), etc...
+-Customizable (user selects which feeds they want, drag and drop layout, drop down menu, etc.)
+-Genre selection (world news, local news, sports, finance, weather, etc...)
+-Buttons: back, forward, genre, and search
+ 
+Product Backlog:
+-Get a firm grasp of JavaScript/HTML
+-Create the overall layout for the webpage (logo?)
+-Add buttons (home, back, forward, category, search)
+-Obtain data from news sources according to the category (which could be a drop-down menu)
+-Retrieve and display data on click
+-Link up the back and forward buttons
+-Implement the search engine
+-Implement the home tab (user is able to customize the page layout by adding genre and dragging/dropping genre sections per their liking)
+
