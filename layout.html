@@ -6,5 +6,65 @@
 </head>
 
 <body>
+
+<script language="javascript" type = "text/javascript" >
+function linkto (x) {
+	if (document.form1.sportsmenu.value != "null") {
+		document.location.href = x
+	}
+	
+	else if (document.form1.localmenu.value != "null") {
+		document.location.href = x
+	}
+	
+	else if (document.form1.worldmenu.value != "null") {
+		document.location.href = x	
+	}
+}
+</script>
+
+<form name="form1">
+  <select name = "sportsmenu" onChange="linkto(document.form1.sportsmenu.options[document.form1.sportsmenu.options.selectedIndex].value)">
+    <option>Sports Sources</option>
+    <option value=http://espn.go.com/>  
+    ESPN
+    <option value=http://sportsillustrated.cnn.com/>  
+    Sports Illustrated
+    <option value=http://msn.foxsports.com//>  
+    Fox Sports
+    <option value=http://sports.yahoo.com/>  
+    Yahoo! Sports
+  </select>
+  
+  <select name = "localmenu" onChange="linkto(document.form1.localmenu.options[document.form1.localmenu.options.selectedIndex].value)">
+    <option>Local News Sources</option>
+    <option value=http://www.ksdk.com/>    
+      
+    KSDK
+    
+    <option value=http://stlouis.cbslocal.com/category/news/local-news/>    
+      
+    CBS
+    
+    <option value=http://www.stltoday.com/>    
+      
+    Post Dispatch
+    
+    <option value=http://www.nbcnews.com/id/26400192?querycity=St%20Louis,MO> NBC
+  </select>
+  
+  <select name = "worldmenu" onChange = "linkto(document.form1.worldmenu.options[document.form1.worldmenu.options.selectedIndex].value)">
+  	<option>World News Sources</option>
+  	<option value=http://www.cnn.com/WORLD/index.html>CNN World</option>
+    <option value=http://www.bbc.co.uk/news/world/>BBC World</option>
+    <option value=http://www.guardian.co.uk/world>Guardian World</option>
+    <option value=http://www.nbcnews.com/id/3032507>NBC World</option>
+    
+  </select>
+  
+  
+  
+</form>
+
 </body>
 </html>
