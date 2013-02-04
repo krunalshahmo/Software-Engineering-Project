@@ -5,7 +5,7 @@ Ideas:
 -Pulls data from selected sms feeds, twitter, web sites (maybe?), etc...
 -Customizable (user selects which feeds they want, drag and drop layout, drop down menu, etc.)
 -Genre selection (world news, local news, sports, finance, weather, etc...)
--Buttons: home, back, forward, genre, and search
+-Buttons: home, genre, about us, tutorial/FAQ, and search
  
 Product Backlog:
 
