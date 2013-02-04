@@ -20,6 +20,10 @@ function linkto (x) {
 	else if (document.form1.worldmenu.value != "null") {
 		document.location.href = x	
 	}
+	
+	else if (document.form1.musicmenu.value != "null") {
+		document.location.href = x	
+	}
 }
 </script>
 
@@ -59,6 +63,14 @@ function linkto (x) {
     <option value=http://www.bbc.co.uk/news/world/>BBC World</option>
     <option value=http://www.guardian.co.uk/world>Guardian World</option>
     <option value=http://www.nbcnews.com/id/3032507>NBC World</option>
+    
+  </select>
+  
+  <select name = "musicmenu" onChange = "linkto(document.form1.musicmenu.options[document.form1.musicmenu.options.selectedIndex].value)">
+  	<option>Music News Sources</option>
+  	<option value=http://www.billboard.com/>BILLBOARD</option>
+    <option value=http://www.rollingstone.com/>ROLLING STONE</option>
+    <option value=http://www.mtv.com/news/latest/music.jhtml>MTV</option>
     
   </select>
   
