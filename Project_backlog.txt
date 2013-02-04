@@ -15,7 +15,7 @@ Product Backlog:
 -Obtain data from news sources -through rss feeds- according to the category ()
 -Add buttons: home, back, forward, category, search ()
 
-------------------End of First Sprint-----------------------------
+------------------End of First Sprint----Due Feb 22-------------------------
 
 -Retrieve and display data on click ()
 -Link up the back and forward buttons ()
