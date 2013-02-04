@@ -8,17 +8,26 @@ Ideas:
 -Buttons: home, back, forward, genre, and search
  
 Product Backlog:
+
 -Get a firm grasp of JavaScript/HTML (X)
 -Create the overall layout for the webpage () 
 -Create the logo (X)
+-Obtain data from news sources -through rss feeds- according to the category ()
 -Add buttons: home, back, forward, category, search ()
--Obtain data from news sources according to the category ()
+
+------------------End of First Sprint-----------------------------
+
 -Retrieve and display data on click ()
 -Link up the back and forward buttons ()
 -Implement the search engine ()
 -Implement the home tab (user is able to customize the page layout by adding genre and dragging/dropping genre sections per their liking) ()
+
+------------------End of Second Sprint-----------------------------
+
 -Add other interactive features (picture for each section, animation, etc.) ()
 
+
  
+------------------Finished Product---------------------------------
  
  
