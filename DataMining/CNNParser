@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#This script grabs headlines from http://www.CNN.com
+#Headlines are grabbed from the categories US, World, Politics, Tech, Buisiness and Entertainment
+#These headlines are put into a plaintext file named CNN
+#In this file each category name has its own line
+#and is followed by its headlines.  Each headline has its own line
+#An empty line seperates categories
+
+java URLConnectionReader http://www.cnn.com | tr -d '\n' | sed 's/>/>\n/g' | \
+grep "</a>" | sed 's_</a>__g' |  tr '\n' '~' | sed 's/U.S./\nU.S./' | \
+sed 's_World_\n&_' | sed 's/Politics/\n&/' | sed 's/Video/\n&/' | \
+sed 's/Tech/\n&/' | sed 's/Business/\n&/' | sed 's/Opinion/\n&/' | \
+sed 's/Entertainment/\n&/' | sed 's/Travel/\n&/' | \
+egrep '^U.S.|^World|^Politics|^Tech|^Business|^Entertainment' | \
+sed 's/\t//g' | sed 's/~~*/~/g' | tr '~' '\n' > CNN
