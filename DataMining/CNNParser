@@ -8,9 +8,15 @@
 #An empty line seperates categories
 
 java URLConnectionReader http://www.cnn.com | tr -d '\n' | sed 's/>/>\n/g' | \
-grep "</a>" | sed 's_</a>__g' |  tr '\n' '~' | sed 's/U.S./\nU.S./' | \
-sed 's_World_\n&_' | sed 's/Politics/\n&/' | sed 's/Video/\n&/' | \
+grep "</a>" | sed 's_World</a>_&#_' | sed 's_U.S.</a>_&#_' | sed 's_Politics</a>_&#_' | \
+sed 's_Tech</a>_&#_' | sed 's_Business</a>_&#_' | sed 's_Entertainment</a>_&#_' | \
+sed 's_</a>__g' | \
+tr '\n' '~' | sed 's/U.S.#/\n&/' | \
+sed 's_World#_\n&_' | sed 's/Politics/\n&/' | sed 's/Video/\n&/' | \
 sed 's/Tech/\n&/' | sed 's/Business/\n&/' | sed 's/Opinion/\n&/' | \
 sed 's/Entertainment/\n&/' | sed 's/Travel/\n&/' | \
-egrep '^U.S.|^World|^Politics|^Tech|^Business|^Entertainment' | \
-sed 's/\t//g' | sed 's/~~*/~/g' | tr '~' '\n' > CNN
+egrep '^U.S.#|^World#|^Politics#|^Tech#|^Business#|^Entertainment#' | \
+sed 's/\t//g' | sed 's/~~*/~/g' | sed 's/U.S.#/U.S./' | sed 's/World#/World/' | \
+sed 's/Politics#/Politics/' | sed 's/Tech#/Tech/' | sed 's/Business#/Business/' | \
+sed 's/Entertainment#/Entertainment/' | \
+tr '~' '\n' > CNN
