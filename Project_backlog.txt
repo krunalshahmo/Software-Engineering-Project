@@ -10,10 +10,11 @@ Ideas:
 Product Backlog:
 
 -Get a firm grasp of JavaScript/HTML (X)
--Create the overall layout for the webpage () 
+-Create the overall layout for the webpage ()
+-Create a model layout, jpeg image (X)
 -Create the logo (X)
 -Obtain data from news sources -through rss feeds- according to the category ()
--Add buttons: home, back, forward, category, search ()
+-Add buttons: home, genre, about us, tutorial/FAQ, search ()
 -(For Alpha Version) From Home page -> Genre -> hover down menu -> (Sports, Finance, News, Religion, Local News) -> Click a link -> 
   Goes to Jacob's Layout with top 6 feeds with pictures -> each picture takes to specific RSS Feed with dedicated page
 
