@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#This script takes one or more URLs as arguments
+#It loops through these URLs grabbing the HTML source,
+#parsing this source for img tags,
+#grabbing the source URL
+#and then downloading any images from these URLs.
+#These image files are placed in a direcetory named 'images'
+#All files smaller than 20k are then deleted from the images directory
+
+for var in "$@"
+do
+  java URLConnectionReader $var | \
+  sed 's_img_\n&_g' | grep "^img" | \
+  sed 's_src[\s]*=[\s]*"_\n&_g' | \
+  grep "^src" | \
+  sed 's_src[\s]*=[\s]*"[\s]*__g' | \
+  sed 's_\s_\n~_g' | \
+  grep "^http" | \
+  sed 's_"_\n"_g' | \
+  grep "^http" | \
+  egrep "jpg$|jpeg$|png$|bmp$" | \
+  wget -i - -P ./images -A jpg,jpeg,png,bmp -q -nc
+done
+find ./images -size -20k -exec rm -f {} \;
