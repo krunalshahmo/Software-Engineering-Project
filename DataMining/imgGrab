@@ -10,9 +10,9 @@
 
 for var in "$@"
 do
-  f=`echo $var | sed 's_.com__g' | sed 's_.org__g' | \
-    sed 's_.edu__g' | sed 's_http://__g' | \
-    sed 's_www.__g' | sed 's_[/.:]__g'`
+  f=`echo $var | \
+    sed 's_http:__g' | \
+    sed 's_//www.__g' | sed 's_[/.:]__g'`
 
   java URLConnectionReader $var | \
   sed 's_img_\n&_g' | grep "^img" | \
@@ -25,10 +25,11 @@ do
   grep "^http" | \
   egrep "jpg$|jpeg$|png$|bmp$" | \
   wget -i - -P ./$f -A jpg,jpeg,png,bmp -q -nc
+  find ./$f -size -20k -exec rm -f {} \;
+  find ./$f | tail -n +3 | xargs rm -f
+  mv ./$f/*.jpg ./$f/cover.jpg
+  mv ./$f/*.jpeg ./$f/cover.jpeg
+  mv ./$f/*.png ./$f/cover.png
+  mv ./$f/*.bmp ./$f/cover.bmp
 done
 
-find ./$f -size -20k -exec rm -f {} \;
-mv ./$f/*.jpg ./$f/cover.jpg
-mv ./$f/*.jpeg ./$f/cover.jpeg
-mv ./$f/*.png ./$f/cover.png
-mv ./$f/*.bmp ./$f/cover.bmp
