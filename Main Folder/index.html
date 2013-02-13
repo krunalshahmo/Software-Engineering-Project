@@ -19,10 +19,10 @@
 			<ul>
 				<li><a href="#">Sports</a>
                 	<ul>
-						<li><a href="espn.html">ESPN</a></li>
-						<li><a href="espnNFL.html">NFL News</a></li>
-                        <li><a href="espnMLB.html">MLB News</a></li>
-                        <li><a href="espnNFL.html">NHL News</a></li>
+						<li><a href="espn.html" target="main">ESPN</a></li>
+						<li><a href="espnNFL.html" target="main">NFL News</a></li>
+                        <li><a href="espnMLB.html" target="main">MLB News</a></li>
+                        <li><a href="espnNFL.html" target="main">NHL News</a></li>
 					</ul>
                 </li>
 		  <li><a href="#">Finance</a>
@@ -59,4 +59,8 @@
   </ul>
 </nav>
 <hr />
-</body></html>
+
+<iframe name="main" src="*" onload="this.style.height = ifr.document.body.scrollHeight + 5"></iframe>
+
+</body>
+</html>
