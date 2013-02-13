@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#This script takes one or more URLs as arguments
+#It loops through these URLs grabbing the HTML source,
+#    parsing this source for img tags,
+#    grabbing the source URL
+#    and then downloading any images from these URLs.
+#These image files are placed in a direcetory with the name of the URL
+#    minus http://www and any other . / or :
+#All files smaller than 20k are then deleted from the images directory.
+#Next all but one image is deleted
+#    this image is renamed to cover.jpg (or cover.jpeg, cover.png, etc...)
+
+for var in "$@"
+do
+  f=`echo $var | \
+    sed 's_http:__g' | sed 's_//www.__g' | \
+    sed 's_[/.:]__g'`
+
+  java URLConnectionReader $var | \
+  sed 's_img_\n&_g' | grep "^img" | \
+  sed 's_src[\s]*=[\s]*"_\n&_g' | \
+  grep "^src" | \
+  sed 's_src[\s]*=[\s]*"[\s]*__g' | \
+  sed 's_\s_\n~_g' | \
+  grep "^http" | \
+  sed 's_"_\n"_g' | \
+  grep "^http" | \
+  egrep "jpg$|jpeg$|png$|bmp$" | \
+  wget -i - -P ./$f -A jpg,jpeg,png,bmp -q -nc
+  find ./$f -size -20k -exec rm -f {} \;
+  find ./$f | tail -n +3 | xargs rm -f
+  mv ./$f/*.jpg ./$f/cover.jpg
+  mv ./$f/*.jpeg ./$f/cover.jpeg
+  mv ./$f/*.png ./$f/cover.png
+  mv ./$f/*.bmp ./$f/cover.bmp
+done
+

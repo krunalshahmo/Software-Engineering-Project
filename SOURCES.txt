@@ -1,2 +1,6 @@
 http://www.quackit.com/javascript/javascript_dropdown_menu.cfm
 http://www.w3schools.com/
+http://www.grymoire.com/Unix/Sed.html
+http://line25.com/tutorials/how-to-create-a-pure-css-dropdown-menu
+https://www.rssinclude.com/
+http://msdn.microsoft.com/en-us/expression/dd571509.aspx
