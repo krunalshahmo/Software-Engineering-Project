@@ -81,3 +81,34 @@ nav ul ul {
 nav ul ul ul {
 	position: absolute; left: 100%; top:5;
 }
+
+ul#sidebar
+{
+	font-size: .75em;
+	margin: 35px 0;
+}
+ul#sidebar li.sidebar-element h3,
+ul#sidebar li.sidebar-element a
+{
+	display: block;
+	width: 150px;
+	padding: 5px 15px;
+	margin: 0;
+	margin-bottom: 5px;
+}
+ul#sidebar li.sidebar-element h3
+{
+	color: #ff0000;
+	background: #333;
+	border: 1px solid #1a1a1a;
+	font-weight: normal;
+}
+ul#sidebar li.sidebar-element a
+{
+	color: #999;
+	background: #222;
+	border: 1px solid #1a1a1a;
+	text-decoration: none;
+}
+ul#sidebar li.sidebar-element a:hover { color: #ff0000; }
+
