@@ -10,15 +10,17 @@ Ideas:
 Product Backlog:
 
 -Get a firm grasp of JavaScript/HTML (X)
--Create the overall layout for the webpage ()
+-Create the overall layout for the webpage (X)
 -Create a model layout, jpeg image (X)
 -Create the logo (X)
 -Obtain data from news sources -through rss feeds- according to the category (X)
 -Add buttons: home, genre, about us, tutorial/FAQ, search (X)
--Create a side bar with catagories that would load RSS feeds inside the iFrame(X).
+-Create a side bar with catagories that would load RSS feeds inside the iFrame (X)
 
 ------------------End of First Sprint----Due Feb 22-------------------------
 
+-Implement the splitting of genre.html using div tags ()
+-Weather cateogry using user input ()
 -Retrieve and display data on click ()
 -Link up the back and forward buttons ()
 -Implement the search engine ()
