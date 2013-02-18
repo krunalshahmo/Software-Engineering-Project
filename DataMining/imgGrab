@@ -29,7 +29,8 @@ do
   egrep "jpg$|jpeg$|png$|bmp$" | \
   wget -i - -P ./$f -A jpg,jpeg,png,bmp -q -nc
   find ./$f -size -20k -exec rm -f {} \;
-  find ./$f | tail -n +3 | xargs rm -f
+  find ./$f -type f -print0 | xargs -0 du -s | sort -rn | awk 'NR>1 {print $NF}' | xargs rm -f
+  #find ./$f | tail -n +3 | xargs rm -f
   mv ./$f/*.jpg ./$f/cover.jpg
   mv ./$f/*.jpeg ./$f/cover.jpeg
   mv ./$f/*.png ./$f/cover.png
