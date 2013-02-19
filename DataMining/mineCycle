@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#this script should innitiate all of the datamining
+#  jobs that we need to do
+
+./imgGrab http://www.cnn.com
+./imgGrab http://espn.go.com
+./imgGrab http://www.nbcnews.com
+./imgGrab http://www.foxnews.com
+./imgGrab http://www.stltoday.com
+
