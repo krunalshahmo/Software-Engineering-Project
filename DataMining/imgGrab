@@ -7,8 +7,7 @@
 #    and then downloading any images from these URLs.
 #These image files are placed in a direcetory with the name of the URL
 #    minus http://www and any other . / or :
-#All files smaller than 20k are then deleted from the images directory.
-#Next all but one image is deleted
+#Next all but the largest image is deleted
 #    this image is renamed to cover.jpg (or cover.jpeg, cover.png, etc...)
 
 for var in "$@"
@@ -28,12 +27,22 @@ do
   grep "^http" | \
   egrep "jpg$|jpeg$|png$|bmp$" | \
   wget -i - -P ./$f -A jpg,jpeg,png,bmp -q -nc
-  find ./$f -size -20k -exec rm -f {} \;
   find ./$f -type f -print0 | xargs -0 du -s | sort -rn | awk 'NR>1 {print $NF}' | xargs rm -f
-  #find ./$f | tail -n +3 | xargs rm -f
-  mv ./$f/*.jpg ./$f/cover.jpg
-  mv ./$f/*.jpeg ./$f/cover.jpeg
-  mv ./$f/*.png ./$f/cover.png
-  mv ./$f/*.bmp ./$f/cover.bmp
+  if ls -U ./$f/*.jpg > /dev/null 2>&1
+  then
+    mv ./$f/*.jpg ./$f/cover.jpg
+  fi
+  if ls -U ./$f/*.jpeg > /dev/null 2>&1
+  then
+    mv ./$f/*.jpeg ./$f/cover.jpeg
+  fi
+  if ls -U ./$f/*.png > /dev/null 2>&1
+  then
+    mv ./$f/*.png ./$f/cover.png
+  fi
+  if ls -U ./$f/*.bmp > /dev/null 2>&1
+  then
+    mv ./$f/*.bmp ./$f/cover.bmp
+  fi
 done
 
