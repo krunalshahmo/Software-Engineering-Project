@@ -2,6 +2,12 @@
 	background-color: #000;
 }
 
+.center
+{
+	margin:auto;
+	width:55%;
+}
+
 .container {
 	width: 1000;
 	background-color: #000;
