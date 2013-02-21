@@ -2,19 +2,21 @@
 
 #this script should innitiate all of the datamining
 #  jobs that we need to do
-
-rm -rf ./cnncom
-rm -rf ./foxnewscom
-rm -rf ./nbcnewscom
-rm -rf ./stltodaycom
-rm -rf ./espngocom
-./imgGrab http://www.cnn.com
-./imgGrab http://espn.go.com
-./imgGrab http://www.nbcnews.com
-./imgGrab http://www.foxnews.com
-./imgGrab http://www.stltoday.com
-cp -r ./cnncom ../Main\ Folder
-cp -r ./foxnewscom ../Main\ Folder
-cp -r ./nbcnewscom ../Main\ Folder
-cp -r ./stltodaycom ../Main\ Folder
-cp -r ./espngocom ../Main\ Folder
+while [ 1 ]; do
+  rm -rf ./cnncom
+  rm -rf ./foxnewscom
+  rm -rf ./nbcnewscom
+  rm -rf ./stltodaycom
+  rm -rf ./espngocom
+  ./imgGrab http://www.cnn.com
+  ./imgGrab http://espn.go.com
+  ./imgGrab http://www.nbcnews.com
+  ./imgGrab http://www.foxnews.com
+  ./imgGrab http://www.stltoday.com
+  cp -r ./cnncom ../Main\ Folder
+  cp -r ./foxnewscom ../Main\ Folder
+  cp -r ./nbcnewscom ../Main\ Folder
+  cp -r ./stltodaycom ../Main\ Folder
+  cp -r ./espngocom ../Main\ Folder
+  sleep 20m
+done
