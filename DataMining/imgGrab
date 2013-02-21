@@ -21,11 +21,10 @@ do
   sed 's_src[\s]*=[\s]*"_\n&_g' | \
   grep "^src" | \
   sed 's_src[\s]*=[\s]*"[\s]*__g' | \
-  sed 's_\s_\n~_g' | \
   grep "^http" | \
   sed 's_"_\n"_g' | \
-  grep "^http" | \
-  egrep "jpg$|jpeg$|png$|bmp$" | \
+  grep "^http" > test
+  cat test | egrep "jpg$|jpeg$|png$|bmp$" | \
   wget -i - -P ./$f -A jpg,jpeg,png,bmp -q -nc
   find ./$f -type f -print0 | xargs -0 du -s | sort -rn | awk 'NR>1 {print $NF}' | xargs rm -f
   if ls -U ./$f/*.jpg > /dev/null 2>&1
