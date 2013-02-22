@@ -2,36 +2,36 @@ Top News Web App:
 ______________________________________________________________________________
  
 Ideas:
--Pulls data from selected sms feeds, twitter, web sites (maybe?), etc...
--Customizable (user selects which feeds they want, drag and drop layout, drop down menu, etc.)
+
+-Pulls data from selected rss feeds, twitter, web sites (maybe?), etc...
+-Customizable (user selects which feeds they want, drag and drop layout, sidebar menu, etc.)
 -Genre selection (world news, local news, sports, finance, weather, etc...)
 -Buttons: home, genre, about us, tutorial/FAQ, and search
  
 Product Backlog:
 
--Get a firm grasp of JavaScript/HTML (X)
--Create the overall layout for the webpage (X)
--Create a model layout, jpeg image (X)
--Create the logo (X)
--Obtain data from news sources -through rss feeds- according to the category (X)
--Add buttons: home, genre, about us, tutorial/FAQ, search (X)
--Create a side bar with catagories that would load RSS feeds inside the iFrame (X)
+-Get a firm grasp of JavaScript/HTML5/CSS3 (X)
+-Create a model layout of the website (jpeg image) (X)
+-Implement the overall layout (X)
+-Create a logo and incorporate it into the website (X)
+-Add a navigation bar consisting of home, genre, about us, tutorial/FAQ, search (X)
+-(aboutus.html) Implement the About Us page (X)
+-(genre.html) Obtain data from news sources -through rss feeds- according to the category (X)
+-(genre.html) Create a side bar with catagories that would load RSS feeds into the iFrame (X)
+-(genre.html) Implement the splitting of the side bar and the iFrame using div tags (X)
+-(index.html) Grab top images from websites and incorporate them into the home page (X)
 
 ------------------End of First Sprint----Due Feb 22-------------------------
 
--Implement the splitting of genre.html using div tags ()
--Weather cateogry using user input ()
--Retrieve and display data on click ()
--Link up the back and forward buttons ()
+-(tutorial.html) Implement the tutorial/FAQ page ()
+-(genre.html) Retrieve and display data on click ()
+-(genre.html) Implement the weather cateogry, asking the user to input a zip code ()
 -Implement the search engine ()
--Implement the home tab (user is able to customize the page layout by adding genre and dragging/dropping genre sections per their liking) ()
+-(index.html) Add user customizability to the home page - selection of genre and the ability to drag & drop ()
 
 ------------------End of Second Sprint-----------------------------
 
--Add other interactive features (picture for each section, animation, etc.) ()
-
-
+-Add other interactive features - picture for each section, animation, etc. ()
+-Create a mobile version of the website ()
  
 ------------------Finished Product---------------------------------
- 
- 
