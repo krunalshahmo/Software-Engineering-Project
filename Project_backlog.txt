@@ -38,6 +38,7 @@ Product Backlog:
 -Tutorial for Page ()
 -Weather stick with RSS feed? implement weather for supplied user zip code. ()
 -in weather RSS feed, implement link "click for 5 day forcast" ()
+-Move home page into the blank.html page ()
 
 ------------------End of Second Sprint-----------------------------
 
