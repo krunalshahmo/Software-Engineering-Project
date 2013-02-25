@@ -36,6 +36,8 @@ Product Backlog:
 -Add scroll bars to IFrame ()   [so nav bar or side grid stays in place when user scrolls]
 -Customizable homepage, using cookies, set “pictures” which are links to favorites ()
 -Tutorial for Page ()
+-Weather stick with RSS feed? implement weather for supplied user zip code. ()
+-in weather RSS feed, implement link "click for 5 day forcast" ()
 
 ------------------End of Second Sprint-----------------------------
 
