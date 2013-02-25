@@ -23,11 +23,19 @@ Product Backlog:
 
 ------------------End of First Sprint----Due Feb 22-------------------------
 
+-Research Database ()
+- Research Cookies () if not maybe Login? 
 -(tutorial.html) Implement the tutorial/FAQ page ()
 -(genre.html) Retrieve and display data on click ()
 -(genre.html) Implement the weather cateogry, asking the user to input a zip code ()
 -Implement the search engine ()
 -(index.html) Add user customizability to the home page - selection of genre and the ability to drag & drop ()
+-Setup database ()
+-Have Landon's parsers pull data into database ()
+-push data from database to website ()
+-Add scroll bars to IFrame ()   [so nav bar or side grid stays in place when user scrolls]
+-Customizable homepage, using cookies, set “pictures” which are links to favorites ()
+-Tutorial for Page ()
 
 ------------------End of Second Sprint-----------------------------
 
