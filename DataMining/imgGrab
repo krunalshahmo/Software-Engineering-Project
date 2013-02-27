@@ -26,7 +26,10 @@ do
   grep "^http" > test
   cat test | egrep "jpg$|jpeg$|png$|bmp$" | \
   wget -i - -P ./$f -A jpg,jpeg,png,bmp -q -nc
-  find ./$f -type f -print0 | xargs -0 du -s | sort -rn | awk 'NR>1 {print $NF}' | xargs rm -f
+  find ./$f -type f -print0 | xargs -0 du -s | \
+  sort -rn | tail -n +2 | sed 's_\._\n\._' | \
+  grep '^\.' | sed 's_ _\\ _g' > test
+  cat test | xargs rm -f
   if ls -U ./$f/*.jpg > /dev/null 2>&1
   then
     mv ./$f/*.jpg ./$f/cover.jpg
