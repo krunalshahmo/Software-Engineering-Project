@@ -44,5 +44,7 @@ Product Backlog:
 
 -Add other interactive features - picture for each section, animation, etc. ()
 -Create a mobile version of the website ()
- 
+- images tentative put back
+- homepage in Iframe
+- click a button, beefed up version of RS feed, like top 10 stories (reddit)
 ------------------Finished Product---------------------------------
