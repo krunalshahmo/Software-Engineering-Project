@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#this script pulls headlines from ESPN.com
+#appends the headline's URL followed by the headline
+#onto the file ESPNHeadlines
+#This file is capped at 100 lines
+
 java URLConnectionReader http://espn.go.com | sed ':begin;$!N;s/\n/~~~~~/;tbegin' | \
 sed 's_</script><!-- begin InContent ad -->_\n&_g' | egrep -v '^</script><!-- begin InContent ad -->' | \
 sed 's_~~~~~_\n_g' | grep '^<li><a href="http://' | \
