@@ -3,6 +3,7 @@
 #this script should innitiate all of the datamining
 #  jobs that we need to do
 while [ 1 ]; do
+  ./ESPNParser
   rm -rf ./cnncom
   rm -rf ./foxnewscom
   rm -rf ./nbcnewscom
