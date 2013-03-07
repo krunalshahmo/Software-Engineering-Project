@@ -1,0 +1,13 @@
+#This script grabs headlines from ESPN's website
+#It then adds this to a file named ESPNHeadlines
+#Every headline is preceeded by the corrosponding URL for that headline
+
+#!/bin/bash
+
+java URLConnectionReader http://espn.go.com | sed ':begin;$!N;s/\n/~~~~~/;tbegin' | \
+sed 's_</script><!-- begin InContent ad -->_\n&_g' | egrep -v '^</script><!-- begin InContent ad -->' | \
+sed 's_~~~~~_\n_g' | grep '^<li><a href="http://' | \
+sed 's_</a>_\n&_g' | grep '^<li><a href="http://' | \
+sed 's_>_&\n_g' | sed 's_href="\(.*\)"_\n\1_g' | \
+sed 's_"_\n"_g' | egrep -v '"|"' | \
+egrep -v '^<li>$|^<a $' >> ESPNHeadlines
