@@ -1,0 +1,23 @@
+#!/bin/bash
+#This script takes headline files as arguments
+#it goes through each and contructs an html file with the same name (but html extension)
+
+
+for var in "$@"
+do
+
+  rm -f $var.html
+  echo \<HTML\> >> $var.html
+  echo \<BODY\> >> $var.html
+
+  #Here begins headline file manipulation
+  cat $var | sed 's_^http://_<a href=\"&_g' | sed 's_^<a href.*_&\"_g' | sed 's_^<a href.*_&>_g' | \
+  tr -d '\n' | sed 's_<_\n&_g' | sed 's_^<a href.*_&</a>_g' | sed 's_^<a href.*_&<br>_g' >> $var.html
+
+
+  printf "%b\n" >> $var.html
+  echo \</BODY\> >> $var.html
+  echo \</HTML\> >> $var.html
+
+
+done
