@@ -14,8 +14,8 @@
     if (f) {
       var r = new FileReader();
       r.onload = function(e) { 
-	      var contents = e.target.result;
-		  document.write(contents);
+	      var contents = e.target.result.split('\n');
+		  document.write(contents[3]);
         //alert( "Got the file.n" 
               //+"name: " + f.name + "n"
               //+"type: " + f.type + "n"
