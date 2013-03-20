@@ -4,6 +4,7 @@
 #  jobs that we need to do
 while [ 1 ]; do
   ./ESPNParser
+  ./HTMLconstruct ESPNHeadlines
   rm -rf ./cnncom
   rm -rf ./foxnewscom
   rm -rf ./nbcnewscom
@@ -14,6 +15,7 @@ while [ 1 ]; do
   ./imgGrab http://www.nbcnews.com
   ./imgGrab http://www.foxnews.com
   ./imgGrab http://www.stltoday.com
+  cp  ./ESPNHeadlines.html ../Main\ Folder/espn.html
   cp -r ./cnncom ../Main\ Folder
   cp -r ./foxnewscom ../Main\ Folder
   cp -r ./nbcnewscom ../Main\ Folder

@@ -8,7 +8,7 @@ do
 
   rm -f $var.html
   echo \<HTML\> >> $var.html
-  echo \<BODY\> >> $var.html
+  echo \<BODY bgColor=Black link=Red vlink=Silver\> >> $var.html
 
   #Here begins headline file manipulation
   cat $var | sed 's_^http://_<a href=\"&_g' | sed 's_^<a href.*_&\"_g' | sed 's_^<a href.*_&>_g' | \
