@@ -5,6 +5,7 @@
 while [ 1 ]; do
   ./ESPNParser
   ./HTMLconstruct ESPNHeadlines
+  ./Allheadlines
   rm -rf ./cnncom
   rm -rf ./foxnewscom
   rm -rf ./nbcnewscom
