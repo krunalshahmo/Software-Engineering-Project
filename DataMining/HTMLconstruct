@@ -12,7 +12,8 @@ do
 
   #Here begins headline file manipulation
   cat $var | sed 's_^http://_<a href=\"&_g' | sed 's_^<a href.*_&\"_g' | sed 's_^<a href.*_&>_g' | \
-  tr -d '\n' | sed 's_<_\n&_g' | sed 's_^<a href.*_&</a>_g' | sed 's_^<a href.*_&<br>_g' >> $var.html
+  tr -d '\n' | sed 's_<_\n&_g' | sed 's_^<a href.*_&</a>_g' | sed 's_^<a href.*_&<br>_g' | \
+  sed '1!G;h;$!d' >> $var.html
 
 
   printf "%b\n" >> $var.html

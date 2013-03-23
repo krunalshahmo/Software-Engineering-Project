@@ -15,8 +15,8 @@ tr '\n' '~' | sed 's/U.S.#/\n&/' | \
 sed 's_World#_\n&_' | sed 's/Politics/\n&/' | sed 's/Video/\n&/' | \
 sed 's/Tech/\n&/' | sed 's/Business/\n&/' | sed 's/Opinion/\n&/' | \
 sed 's/Entertainment/\n&/' | sed 's/Travel/\n&/' | \
-egrep '^U.S.#|^World#|^Politics#|^Tech#|^Business#|^Entertainment#' | \
-sed 's/\t//g' | sed 's/~~*/~/g' | sed 's/U.S.#/U.S./' | sed 's/World#/World/' | \
+egrep '^U.S.#|^World#|^Politics#|^Tech#|^Business#|^Entertainment#' > test
+cat test | sed 's/\t//g' | sed 's/~~*/~/g' | sed 's/U.S.#/U.S./' | sed 's/World#/World/' | \
 sed 's/Politics#/Politics/' | sed 's/Tech#/Tech/' | sed 's/Business#/Business/' | \
 sed 's/Entertainment#/Entertainment/' | \
-tr '~' '\n' > CNN
+tr '~' '\n' | egrep -v '^U.S.$|^World$|^Politics$|^Tech$|^Business$|^Entertainment$' > CNN
