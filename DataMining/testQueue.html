@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>
+JavaScript array Queue
+</title>
+
+<h2>
+JavaScript array Queue Example
+</h2>
+
+<script type="text/javascript">
+var arr = new Array();
+function ArrayQueuePush(arrayName,arrayElement){ 
+   arrayName.push(arrayElement); 
+ }
+ function ArrayQueuePop(arrayName){ 
+  arrayName.shift(); 
+ }
+document.writeln("----Calling push method on the Queue----</br>");
+ArrayQueuePush(arr,"Kru");
+ArrayQueuePush(arr,"Jake");
+ArrayQueuePush(arr,"Landon");
+ArrayQueuePush(arr,"Nick");
+document.writeln(arr+"</br>");
+
+document.writeln("----Calling pop method on the Queue----</br>");
+ArrayQueuePop(arr);
+document.writeln(arr+"</br>");
+</script>
+
+
+</head>
+</html>

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#This script puts all the contents of headline
+# files into one big text file.
+
+cat *Headlines > ALLheadlines.txt
+
