@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#This script gathers headlines from multiple finance news sources (so far just CNN money)
+#it then appends these headlines to a file named FinanceHeadlines
+
+java URLConnectionReader http://www.money.cnn.com/ | sed ':begin;$!N;s/\n/~~~~~/;tbegin' | \
+sed 's_<div class="seeMore"><a href_\n&_' | egrep -v '<div class="seeMore"><a href' | \
+sed 's_~~~~~_\n_g' | sed ':begin;$!N;s/\n/~~~~~/;tbegin' | \
+sed 's_Latest News_\n&_' | egrep 'Latest News' | sed 's_~~~~~_\n_g' |
+tr -d '\n' | sed 's_</a>_&\n_g' | sed 's_<a href_\n&_g' | \
+egrep '<a href' | tr -d '\t' | sed 's_<a href_&\n_g' | \
+sed 's_</a>_\n&_g' | egrep -v '^<' | \
+tr '>' '\n' | egrep -v '^<' | sed 's_^= *"__g' | tr -d '"' | \
+sed 's_^/_http://www.money.cnn.com&_g' | sed 's_\&amp;_\&_g' | \
+grep . >> FinanceHeadlines
+cat FinanceHeadlines | tail -100 > temp.tmp
+mv temp.tmp FinanceHeadlines
