@@ -1,6 +1,6 @@
 Compatability:
 
-Mac:
+32-bit Mac:
 
 Opera: slightly cuts off iframe (need to adjust)
 FireFox: slightly cuts off iframe (need to adjust)
