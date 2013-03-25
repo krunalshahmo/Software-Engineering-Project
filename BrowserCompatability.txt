@@ -1,0 +1,13 @@
+Compatability:
+
+Mac:
+
+Opera: slightly cuts off iframe (need to adjust)
+FireFox: slightly cuts off iframe (need to adjust)
+Chrome: Perfect
+Safari: Perfect
+
+Windows:
+FireFox: Not Checked
+Chrome: Not Checked
+Internet Explorer: Not Checked
