@@ -11,3 +11,8 @@ Windows:
 FireFox: Not Checked
 Chrome: Not Checked
 Internet Explorer: Not Checked
+
+Mobile platforms:
+
+Iphone:
+Safari: home page is fine, genre (specifically sports) extends beyond the iframe
