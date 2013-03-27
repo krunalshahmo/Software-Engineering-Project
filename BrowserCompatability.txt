@@ -7,9 +7,9 @@ FireFox: slightly cuts off iframe (need to adjust)
 Chrome: Perfect
 Safari: Perfect
 
-Windows:
-FireFox: Not Checked
-Chrome: Not Checked
+64-bit Windows:
+FireFox: Iframe is slightly lowered otherwise perfect
+Chrome: Iframe is slightly lowered otherwise perfect
 Internet Explorer: Not Checked
 
 Mobile platforms:
