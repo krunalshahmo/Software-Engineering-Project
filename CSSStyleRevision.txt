@@ -1,0 +1,47 @@
+for var in "$@"
+do
+
+  rm -f $var.html
+  echo \<HTML\> >> $var.html
+
+<head>
+<link href="headline.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+  echo \<BODY bgColor=Black\> >> $var.html
+
+<ul id="main">
+<li class="mainbar-element">
+  #Here begins headline file manipulation
+  cat $var | sed 's_^http://_<a href=\"&_g' | sed 's_^<a href.*_&\"_g' | sed 's_^<a href.*_&>_g' | \
+  tr -d '\n' | sed 's_<_\n&_g' | sed 's_^<a href.*_&</a>_g' | sed 's_^<a href.*_&<br>_g' | \
+  sed '1!G;h;$!d' >> $var.html
+</li>
+(get rid of br)
+</ul>
+  printf "%b\n" >> $var.html
+  echo \</BODY\> >> $var.html
+  echo \</HTML\> >> $var.html
+
+
+done
+
+
+FOR EXAMPLE:
+
+<HTML>
+
+<head>
+<link href="headline.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+<BODY bgColor=Black>
+
+<ul id="main">
+<li class="mainbar-element"><a href="http://insider.espn.go.com/mens-college-basketball/tournament/2013/story/_/id/9083621/2013-ncaa-tournament-giant-killers-upset-odds-saturday-games">Giant Killers: Saturday upset odds</a></li>
+<li class="mainbar-element"><a href="http://espn.go.com/boston/nfl/story/_/id/9086959/adrian-wilson-new-england-patriots-offers-kyle-arrington-year-worth-diapers-number-24">Want to trade? Wilson offers diapers for No. 24</a></li><br>
+<a href="http://espn.go.com/mma/story/_/id/9085125/promoters-say-mma-fighter-charles-rowan-faked-death">Promoters say MMA fighter Rowan faked death</a><br>
+</ul>
+
+</BODY>
+</HTML>
