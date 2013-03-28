@@ -28,12 +28,18 @@
     <hr />
 	<li></li>
 	<li>
-	  <!--input type="text" name="q" size="14" />
-	  <input type="submit" value="Search"/>
-	  <input type="hidden" name="q1"/-->
-      <form method="get" action="/search" id="search">
+      <!--form method="get" action="/search" id="search" target="main">
         <input name="q" type="text" size="40" placeholder="Search for headlines..." />
+      </form-->
+      <form method="get" action="http://search.freefind.com/find.html" id="search" target="main">
+        <input type="hidden" name="si" value="20115984">
+		<input type="hidden" name="pid" value="r">
+		<input type="hidden" name="n" value="0">
+		<input type="hidden" name="_charset_" value="">
+		<input type="hidden" name="bcd" value="&#247;">
+		<input type="text" name="query" size="40" placeholder="Search for headlines...">
       </form>
+      
   </li>
     <li class="sidebar-element">
     <li class="sidebar-element"><a href="home.html" target = "main">Home</a></li>
