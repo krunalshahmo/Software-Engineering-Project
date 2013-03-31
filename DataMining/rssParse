@@ -1,0 +1,13 @@
+#!/bin/bash
+# This script parses rss feeds passed as arguments and outputs (to std out)
+#a list of  headline URLs immediately followed by their corrosponding headline title
+
+for var in "$@"
+do
+  ./rssFetch $var | \
+  sed 's_<link>_\n&_g' | sed 's_</link>_&\n_g' | \
+  sed 's_<title>_\n&_g' | sed 's_</title>_&\n_g' | \
+  egrep '^<link>|^<title>' | sed 's_<link>__g' | \
+  sed 's_</link>__g' | sed 's_<title>__g' | sed 's_</title>__g' | \
+  sed 's_<!\[CDATA\[\(.*\)\]\]>_\1_g' | sed '1!G;h;$!d'
+done
