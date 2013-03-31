@@ -1,0 +1,7 @@
+#!/bin/bash
+#This script fetches rss feed code and outputs it to stdout
+
+echo $1 | wget -q -i - --output-document=temp
+cat ./temp
+rm -f ./temp
+
