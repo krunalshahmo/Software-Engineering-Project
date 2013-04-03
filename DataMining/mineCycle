@@ -3,8 +3,12 @@
 #this script should innitiate all of the datamining
 #  jobs that we need to do
 while [ 1 ]; do
-  ./ESPNParser
-  ./FinanceParser
+  ./rssParse http://sports.espn.go.com/espn/rss/news > ESPNHeadlines
+  ./rssParse http://sports.espn.go.com/espn/rss/nfl/news >> ESPNHeadlines
+  ./rssParse http://sports.espn.go.com/espn/rss/nba/news >> ESPNHeadlines
+  ./rssParse http://rss.cnn.com/rss/money_latest.rss > FinanceHeadlines
+  ./rssParse http://feeds.reuters.com/reuters/businessNews >> FinanceHeadlines
+  ./rssParse http://www.forbes.com/most-popular/feed/ >> FinanceHeadlines
   ./HTMLconstruct ESPNHeadlines FinanceHeadlines
   ./Allheadlines
   rm -rf ./cnncom
