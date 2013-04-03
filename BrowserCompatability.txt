@@ -10,7 +10,7 @@ Safari: Perfect
 64-bit Windows:
 FireFox: Iframe is slightly lowered otherwise perfect
 Chrome: Iframe is slightly lowered otherwise perfect
-Internet Explorer: Not Checked
+Internet Explorer: Perfect
 
 Mobile platforms:
 
