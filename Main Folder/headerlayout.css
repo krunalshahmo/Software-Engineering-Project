@@ -79,3 +79,26 @@ ul#sidebar li.sidebar-element a:hover { color: #ff0000; }
 	background-color: #000;
     }
 
+/* Div tag */
+
+#centerpage {
+   	position:absolute;
+	top: 35%;
+	left: 50%;
+	width:35em;
+    height:18em;
+    margin-top: auto; 
+    margin-left: -10em; 
+}
+
+/* Slogan */
+
+.slogan {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #FF0000;
+	font-weight: bold;
+	font-variant: normal;
+	font-style: italic;
+	text-align: center;
+	font-size: 18px;
+}
