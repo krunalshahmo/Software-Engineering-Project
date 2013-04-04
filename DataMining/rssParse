@@ -9,5 +9,6 @@ do
   sed 's_<title>_\n&_g' | sed 's_</title>_&\n_g' | \
   egrep '^<link>|^<title>' | sed 's_<link>__g' | \
   sed 's_</link>__g' | sed 's_<title>__g' | sed 's_</title>__g' | \
-  sed 's_<!\[CDATA\[\(.*\)\]\]>_\1_g' | sed '1!G;h;$!d'
+  sed 's_<!\[CDATA\[\(.*\)\]\]>_\1_g' | sed '1!G;h;$!d' | \
+  sed 's_\&amp;_\&_g'
 done
