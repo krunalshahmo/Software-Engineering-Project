@@ -9,7 +9,14 @@ while [ 1 ]; do
   ./rssParse http://rss.cnn.com/rss/money_latest.rss > FinanceHeadlines
   ./rssParse http://feeds.reuters.com/reuters/businessNews >> FinanceHeadlines
   ./rssParse http://www.forbes.com/most-popular/feed/ >> FinanceHeadlines
-  ./HTMLconstruct ESPNHeadlines FinanceHeadlines
+  ./rssParse http://rss.cnn.com/rss/cnn_world.rss > WorldHeadlines
+  ./rssParse http://feeds.foxnews.com/foxnews/world >> WorldHeadlines
+  ./rssParse http://feeds.bbci.co.uk/news/world/rss.xml >> WorldHeadlines
+  ./rssParse http://rss.cnn.com/rss/cnn_showbiz.rss > EntertainmentHeadlines
+  ./rssParse http://feeds.foxnews.com/foxnews/entertainment >> EntertainmentHeadlines
+  ./rssParse http://syndication.eonline.com/syndication/feeds/rssfeeds/topstories.xml >> EntertainmentHeadlines
+  ./rssParse http://www.npr.org/rss/rss.php?id=1039 > MusicHeadlines
+  ./HTMLconstruct ESPNHeadlines FinanceHeadlines WorldHeadlines EntertainmentHeadlines
   ./Allheadlines
   rm -rf ./cnncom
   rm -rf ./foxnewscom
@@ -23,6 +30,8 @@ while [ 1 ]; do
   ./imgGrab http://www.stltoday.com
   cp ./ESPNHeadlines.html ../Main\ Folder/espn.html
   cp ./FinanceHeadlines.html ../Main\ Folder/finance.html
+  cp ./WorldHeadlines.html ../Main\ Folder/world.html
+  cp ./EntertainmentHeadlines.html ../Main\ Folder/entertainment.html
   cp -r ./cnncom ../Main\ Folder
   cp -r ./foxnewscom ../Main\ Folder
   cp -r ./nbcnewscom ../Main\ Folder
@@ -30,3 +39,4 @@ while [ 1 ]; do
   cp -r ./espngocom ../Main\ Folder
   sleep 20m
 done
+
