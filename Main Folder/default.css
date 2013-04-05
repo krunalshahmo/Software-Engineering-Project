@@ -129,3 +129,13 @@ ul#sidebar li.sidebar-element a
 	position: relative;
 }
 ul#sidebar li.sidebar-element a:hover { color: #ff0000; }
+
+#centerpage {
+   	position:relative;
+	top:-460px;
+	left: 50%;
+	width:35em;
+    height:18em;
+    margin-top: auto; 
+    margin-left: -10em; 
+}
