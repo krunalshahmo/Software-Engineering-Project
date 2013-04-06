@@ -16,8 +16,7 @@ while [ 1 ]; do
   ./rssParse http://feeds.foxnews.com/foxnews/entertainment >> EntertainmentHeadlines
   ./rssParse http://syndication.eonline.com/syndication/feeds/rssfeeds/topstories.xml >> EntertainmentHeadlines
   ./rssParse http://www.npr.org/rss/rss.php?id=1039 > MusicHeadlines
-  ./HTMLconstruct ESPNHeadlines FinanceHeadlines WorldHeadlines EntertainmentHeadlines
-  ./Allheadlines
+  ./HTMLconstruct ESPNHeadlines FinanceHeadlines WorldHeadlines EntertainmentHeadlines MusicHeadlines
   rm -rf ./cnncom
   rm -rf ./foxnewscom
   rm -rf ./nbcnewscom
@@ -30,8 +29,9 @@ while [ 1 ]; do
   ./imgGrab http://www.stltoday.com
   cp ./ESPNHeadlines.html ../Main\ Folder/espn.html
   cp ./FinanceHeadlines.html ../Main\ Folder/finance.html
-  cp ./WorldHeadlines.html ../Main\ Folder/world.html
+  cp ./WorldHeadlines.html ../Main\ Folder/worldnews.html
   cp ./EntertainmentHeadlines.html ../Main\ Folder/entertainment.html
+  cp ./MusicHeadlines.html ../Main\ Folder/music.html
   cp -r ./cnncom ../Main\ Folder
   cp -r ./foxnewscom ../Main\ Folder
   cp -r ./nbcnewscom ../Main\ Folder
