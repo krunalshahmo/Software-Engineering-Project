@@ -6,8 +6,10 @@
 
 ul#main
 {
-	font-size: .75em;
-	margin: 35px 0;
+	font-size: 1em;
+	list-style-type:none;
+	margin:0;
+	padding:0;
 }
 ul#main li.mainbar-element h3,
 ul#main li.mainbar-element a
