@@ -31,7 +31,9 @@ Product Backlog:
 -Implement a mock-up search engine using a third party hosting service (X)
 -(weather.html) Implement the weather cateogry, asking the user to input a zip code (X)
 -(contact.html) Create a contact form, where users can contact us for any questions or concerns (X)
+-Add css styling to headlines (X)
 -Think of and create a catchy slogan (X)
+-Get a new website domain (X)
 
 ------------------End of Second Sprint---Due April 8--------------------------
 
@@ -39,13 +41,11 @@ Product Backlog:
 -Automatic refresh of headlines using AJAX ()
 -Implement better search engine, not using third party service ()
 -Fix espn content reload issue ()
--Create a new website name and email ()
 -Rename espn.html to sports.html ()
 
 -(genre.html) Retrieve and display data on click ()
 -Resize iframe upon content display ()
 -Add next button to display next 10 top news ()
--Add css styling to headlines ()
 -(index.html) Add user customizability to home page (Possible ideas: genre selection, drag & drop, favorites) ()
 -Implement a way to save user customizability preferences (research cookies or login page) () 
 -Static side bar (scrolls down as the user scrolls down) ()
