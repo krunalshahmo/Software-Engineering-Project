@@ -14,8 +14,8 @@ do
   echo \<ul\ id=\"main\"\> >> $var.html
 
   #Here begins headline file manipulation
-  cat $var | sed 's_^http://_<li class=\"mainbar-element\"><a href=\"&_g' | sed 's_^<a href.*_&\"_g' | sed 's_^<a href.*_&>_g' | \
-  tr -d '\n' | sed 's_<_\n&_g' | sed 's_^<a href.*_&</a></li>_g' | sed 's_^<a href.*_&<br>_g' >> $var.html
+  cat $var | sed 's_^http://_<li class=\"mainbar-element\"><a href=\"&_g' | sed 's_<a href.*_&\"_g' | sed 's_<a href.*_&>_g' | \
+  tr -d '\n' | sed 's_<_\n&_g' | sed 's_<a href.*_&</a></li>_g' >> $var.html
 
 
   printf "%b\n" >> $var.html
