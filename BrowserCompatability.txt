@@ -2,17 +2,17 @@ Compatability:
 
 32-bit Mac:
 
-Opera: slightly cuts off iframe (need to adjust)
-FireFox: slightly cuts off iframe (need to adjust)
+Opera: scroll bars on iframe look strange, search bar is misplaced
+FireFox: scroll bars on iframe look strange, otherwise perfect
 Chrome: Perfect
 Safari: Perfect
 
 64-bit Windows:
-FireFox: Iframe is slightly lowered otherwise perfect
-Chrome: Iframe is slightly lowered otherwise perfect
-Internet Explorer: Perfect
+FireFox: Iframe slightly lowered otherwise perfect.
+Chrome: Iframe slightly lowered otherwise perfect.
+Internet Explorer: Iframe positioned far right, links have a blue border, search bar is white and blank
 
 Mobile platforms:
 
 Iphone:
-Safari: home page is fine, genre (specifically sports) extends beyond the iframe
+Safari: Iframe lowered and extends beyond the main page (no scroll bar), otherwise perfect
