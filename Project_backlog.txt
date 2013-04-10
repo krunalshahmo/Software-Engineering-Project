@@ -42,10 +42,11 @@ Product Backlog:
 -Implement better search engine, not using third party service ()
 -Fix espn content reload issue ()
 -Rename espn.html to sports.html ()
--Auto-Refresh list of news when user scrolls down -infinite scroll()
+-Auto-Refresh list of news when user scrolls down -infinite scroll AJAX?()
 -Article contents in Iframe (JS Parsing) 
 
 
+-login through facebook, twitter ()
 -(genre.html) Retrieve and display data on click ()
 -Resize iframe upon content display ()
 -Add next button to display next 10 top news ()
