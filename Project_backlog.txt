@@ -42,6 +42,7 @@ Product Backlog:
 -Implement better search engine, not using third party service ()
 -Fix espn content reload issue ()
 -Rename espn.html to sports.html ()
+-Auto-Refresh list of news when user scrolls down ()
 
 -(genre.html) Retrieve and display data on click ()
 -Resize iframe upon content display ()
@@ -52,5 +53,6 @@ Product Backlog:
 -Add animation to side bar using jquery ()
 -Add other interactive features - picture for each section, animation, etc. ()
 -Create a mobile version of the website ()
+
 
 ------------------Finished Product----Due May 8-----------------------------
