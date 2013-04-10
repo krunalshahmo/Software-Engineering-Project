@@ -43,6 +43,8 @@ Product Backlog:
 -Fix espn content reload issue ()
 -Rename espn.html to sports.html ()
 -Auto-Refresh list of news when user scrolls down ()
+-Article contents in Iframe (JS Parsing) 
+
 
 -(genre.html) Retrieve and display data on click ()
 -Resize iframe upon content display ()
