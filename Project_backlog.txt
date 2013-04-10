@@ -42,7 +42,7 @@ Product Backlog:
 -Implement better search engine, not using third party service ()
 -Fix espn content reload issue ()
 -Rename espn.html to sports.html ()
--Auto-Refresh list of news when user scrolls down ()
+-Auto-Refresh list of news when user scrolls down -infinite scroll()
 -Article contents in Iframe (JS Parsing) 
 
 
