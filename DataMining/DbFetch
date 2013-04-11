@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#this script quarries a mysql database for user rss feeds
+#1st argument: Database name
+#2nd argument: mysql user name
+#3rd argument: table name
+#4th argument: user id (in table)
+#The feed urls are then piped into the rssParser
+
+
+echo "select feed1, feed2, feed3, feed4, feed5 from $3 where id = \"$4\";" | mysql -u $2 $1 | \
+tail -n 1 | sed 's_ _\\&_g' | tr '\t' ' ' | xargs ./rssParse
