@@ -5,6 +5,7 @@
 for var in "$@"
 do
   ./rssFetch $var | \
+  tr -d '\n' | \
   sed 's_<link>_\n&_g' | sed 's_</link>_&\n_g' | \
   sed 's_<title>_\n&_g' | sed 's_</title>_&\n_g' | \
   egrep '^<link>|^<title>' | sed 's_<link>__g' | \
