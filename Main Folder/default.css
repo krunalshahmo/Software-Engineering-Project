@@ -9,54 +9,65 @@ body {
 .container {
 	background-color: #000;
 	margin: auto; /* the auto value on the sides, coupled with the width, centers the layout */
-	width:75%;
+	width: 1000px;
 }
 
 #header {
-	width: 900px;
-	height: 128px;
+	width: 1000px;
+	height: 99px;
 	margin-top: 0;
 	margin-right: auto;
 	margin-bottom: 0;
-	margin-left: auto;
+	margin-left: 0;
 }
 
 #page {
-	width: 975px;
-	height: 500px;
+	width: 920px;
+	height: 650px;
 	margin-top: 0;
-	margin-right: auto;
+	margin-right: 0;
 	margin-bottom: 0;
-	margin-left: auto;
+	margin-left: 0px;
 	padding-top: 0px;
-	padding-right: 0;
+	padding-right: 40px;
 	padding-bottom: 0px;
-	padding-left: 0;
+	padding-left: 40px;
 }
 
 #ads {
 	float: left;
-	width: 220px;
-	height: 450px;
-	padding-top: 30;
-	padding-right: 0;
-	padding-bottom: 30;
+	width: 185px;
+	height: 500px;
+	padding-bottom: 0px;
+	padding-top: 0px;
 	padding-left: 0px;
-	alignment-adjust:auto;
+	alignment-adjust: auto;
+	padding-right: 0px;
 }
 
 #content {
-	float: right;
-	width: 600px;
+	float: left;
+	width: 695px;
+	height: 500px;
+	padding-left: 40px;
 }
 
 
 #footer {
 	clear: both;
-	width: 950px;
-	margin: 0 auto;
-	padding: 30px 0;
+	width: 920px;
 	background: url(images/img11.gif) no-repeat;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	padding-top: 30px;
+	padding-right: 0;
+	padding-bottom: 30px;
+	padding-left: 0;
+	text-align: right;
+	color: #F00;
+	font-size: 14px;
 }
 
 /* search bar */
@@ -69,7 +80,7 @@ body {
     border: 0 none;
     font: bold 12px Arial,Helvetica,Sans-serif;
     color: #777;
-    width: 150px;
+    width: 138px;
     padding: 6px 15px 6px 35px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -85,19 +96,19 @@ body {
     }
 
 #search input[type="text"]:focus {
-    width: 900px;
+    width: 880px;
 	color: #DF0101;
 	background-color: #000;
     }
 	
 /* Sidebar */
 ul#sidebar
-{
-	font-size: .75em;
-	margin-top: 35px;
-	margin-right: 0;
-	margin-bottom: 35px;
+{	
+	font-size: 0.75em;
+	list-style-type:none;
 	margin-left: -10;
+	margin:0;
+	padding:0;
 }
 ul#sidebar li.sidebar-element h3,
 ul#sidebar li.sidebar-element a
@@ -130,12 +141,12 @@ ul#sidebar li.sidebar-element a
 }
 ul#sidebar li.sidebar-element a:hover { color: #ff0000; }
 
-#centerpage {
-   	position:relative;
-	top:-460px;
-	left: 50%;
-	width:35em;
-    height:18em;
-    margin-top: auto; 
-    margin-left: -10em; 
+.slogan {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #FF0000;
+	font-weight: bold;
+	font-variant: normal;
+	font-style: italic;
+	font-size: 18px;
+	text-align: center;
 }
