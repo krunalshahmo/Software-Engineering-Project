@@ -134,9 +134,7 @@ ul#sidebar li.sidebar-element a
 	background-color: #222;
 	background-position: left;
 	text-align: left;
-	margin-left: auto;
 	list-style-position: inside;
-	width: auto;
 	position: relative;
 }
 ul#sidebar li.sidebar-element a:hover { color: #ff0000; }
