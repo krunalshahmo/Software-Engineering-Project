@@ -34,11 +34,26 @@ if ($user)
     die;
   }
   echo "1 record added";
+  chdir("../DataMining");
+  echo "<br/>";
+  $output = shell_exec("./DbFetch userRSS web web sportsFeeds $user");
+  echo "$output<br/>";
+  //$output = shell_exec("./rssFetch $output");
+  //$output = shell_exec("./rssParse $output");
+  if ($output == NULL)
+  {
+    echo "its fucked";
+  }
+  //echo $output;
+
 }
 
 else {
-  echo "please login with facebook!";
+  echo "please go to out main page and login with facebook!";
 }
+
+
+
 
 mysqli_close($con);
 ?>
