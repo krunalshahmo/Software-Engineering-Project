@@ -22,7 +22,7 @@ if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
-if ($user)
+if ($user && ($_POST[feed1] != NULL || $_POST[feed2] != NULL || $_POST[feed3] != NULL || $_POST[feed4] != NULL || $_POST[feed5] != NULL ))
 {
     $sql="INSERT INTO sportsFeeds (id, feed1, feed2, feed3, feed4, feed5)
     VALUES ('$user','$_POST[feed1]','$_POST[feed2]', '$_POST[feed3]', '$_POST[feed4]', '$_POST[feed5]')
@@ -33,19 +33,17 @@ if ($user)
     echo "something broke";
     die;
   }
-  echo "1 record added";
   chdir("../DataMining");
-  echo "<br/>";
   $output = shell_exec("./DbFetch userRSS web web sportsFeeds $user");
   echo "$output<br/>";
-  //$output = shell_exec("./rssFetch $output");
-  //$output = shell_exec("./rssParse $output");
-  if ($output == NULL)
-  {
-    echo "its fucked";
-  }
-  //echo $output;
 
+}
+
+else if ($user)
+{
+  chdir("../DataMining");
+  $output = shell_exec("./DbFetch userRSS web web sportsFeeds $user");
+  echo "$output<br/>";
 }
 
 else {
