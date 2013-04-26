@@ -34,6 +34,14 @@ body {
 	padding-left: 40px;
 }
 
+#settings{
+	float: left;
+	width: 20px;
+	height: 500px;
+	alignment-adjust: auto;
+	padding: 0px;
+}
+
 #ads {
 	float: left;
 	width: 185px;
@@ -115,10 +123,15 @@ ul#sidebar li.sidebar-element a
 {
 	display: block;
 	width: 150px;
-	padding: 5px 15px;
-	margin: 0;
 	margin-bottom: 5px;
 	list-style-position: inside;
+	margin-top: 0;
+	margin-right: 0;
+	margin-left: 0;
+	padding-top: 5px;
+	padding-right: 15px;
+	padding-bottom: 5px;
+	padding-left: 15px;
 }
 ul#sidebar li.sidebar-element h3
 {
