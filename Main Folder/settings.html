@@ -1,58 +1,74 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Settings</title>
 <link rel="stylesheet" type="text/css" href="settings.css" media="all">
-<style type="text/css">
-body {
-	margin-top: 0px;
+
+</head>
+<body leftmargin="0" topmargin="0" id="main_body" >
+<style>
+.form
+{
+columns:100px 3;
+-webkit-columns:100px 3; /* Safari and Chrome */
+-moz-columns:100px 3; /* Firefox */
 }
 </style>
-</head>
-<body leftmargin="0" id="main_body" >
+
 <div id="form_container">
-	
-	  <h1>&nbsp;</h1>
-		<form id="form_613991" class="appnitro"  method="post" action="">
+                <h1>nbsp;</h1>	
+		<form id="form_613991" class="appnitro"  method="post" action="settings.php">
 					<div class="form_description">
-			<h2>Genre		</h2>
-		  </div>						
+			<h2>Select your preferences</h2>
 		  <ul >
-			
+            </div>
+            <div class="form">			
 			<li id="li_1" >
-		<label class="description" for="element_1">Select your preferences:</label>
 		<span>
-			<input id="element_1_1" name="element_1_1" class="element checkbox" type="checkbox" 
-            onclick="window.location='espn.html' " value="1" />
-            <label class="choice" for="element_1_1">Sports</label>
-            <input id="element_1_2" name="element_1_2" class="element checkbox" type="checkbox" 
-            onclick="window.location='finance.html' " value="1" />
-            <label class="choice" for="element_1_2">Finance</label>
-            <input id="element_1_3" name="element_1_3" class="element checkbox" type="checkbox" 
-            onclick="window.location='worldnews.html' " value="1" />
-            <label class="choice" for="element_1_3">World News</label>
-            <input id="element_1_4" name="element_1_4" class="element checkbox" type="checkbox" 
-            onclick="window.location='entertainment.html' " value="1" />
-            <label class="choice" for="element_1_4">Entertainment</label>
-            <input id="element_1_5" name="element_1_5" class="element checkbox" type="checkbox" 
-            onclick="window.location='music.html' " value="1" />
-            <label class="choice" for="element_1_5">Music</label>
-            <input id="element_1_6" name="element_1_6" class="element checkbox" type="checkbox"
-            onclick="window.location='weather.html' " value="1" />
-            <label class="choice" for="element_1_6">Weather</label>
+            <h4>Genres</h4>
+	    <input id="sports" name="sports" class="element checkbox" type="checkbox" value="1" />
+            <label class="choice" for="sports">Sports</label>
+            <input id="finance" name="finance" class="element checkbox" type="checkbox" value="1" />
+            <label class="choice" for="finance">Finance</label>
+            <input id="worldnews" name="worldnews" class="element checkbox" type="checkbox" value="1" />
+            <label class="choice" for="worldnews">World News</label>
+            <input id="entertainment" name="entertainment" class="element checkbox" type="checkbox" value="1" />
+            <label class="choice" for="entertainment">Entertainment</label>
+            <input id="music" name="music" class="element checkbox" type="checkbox" value="1" />
+            <label class="choice" for="music">Music</label>
+            <input id="weather" name="weather" class="element checkbox" type="checkbox" value="1" />
+            <label class="choice" for="weather">Weather</label>
+            <input id="contact" name="contact" class="element checkbox" type="checkbox" value="1" />
+            <label class="choice" for="contact">Contact</label>
+            </li>
+
+            <li class="buttons">
+              <input type="hidden" name="form_id" value="613991" />
+              <input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+            </li>
+
+            <li id="li_2">
+            <h4>My News Feeds</h4>
+            <input id="feed1" name="feed1" class="element text" type="text"/>
+            <label class="text" for="feed1">feed1</label>
+            <input id="feed2" name="feed2" class="element text" type="text"/>
+            <label class="text" for="feed2">feed2</label>
+            <input id="feed3" name="feed3" class="element text" type="text"/>
+            <label class="text" for="feed3">feed3</label>
+            <input id="feed4" name="feed4" class="element text" type="text"/>
+            <label class="text" for="feed4">feed4</label>
+            <input id="feed5" name="feed5" class="element text" type="text"/>
+            <label class="text" for="feed5">feed5</label>
+
 		</span> 
 		</li>
-			
-			<li class="buttons">
-			    <input type="hidden" name="form_id" value="613991" />
-			    
-				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
-		</li>
-		  </ul>
+		</ul>
 		</form>	
+            </div>
 		<div id="footer"></div>
 </div>
+
 </body>
 </html>
 
