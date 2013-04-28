@@ -14,9 +14,11 @@ do
   echo \<ul\ id=\"main\"\> >> $var.html
 
   #Here begins headline file manipulation
-  cat $var | sed 's_^http://_<li class=\"mainbar-element\"><a href=\"&_g' | sed 's_<a href.*_&\"_g' | sed 's_<a href.*_&>_g' | \
+  cat $var | sed 's_^http://.*_~&\n&_g' | sed 's_^~http://.*_<div style=\"float: right; margin-left: 10px;\">\n <a name=\"fb\_share\" type=\"button\_count\" share\_url=\"&\" href=\"http://www.facebook.com/sharer.php\">Share</a></div>\n<div></div>\n_g' | \
+  sed 's_~http://_http://_g' | \
+  sed 's_^http://_<li class=\"mainbar-element\"><a href=\"&_g' | sed 's_<a href.*_&\"_g' | sed 's_<a href.*_&>_g' | \
   tr -d '\n' | sed 's_<_\n&_g' | sed 's_<a href.*_&</a></li>_g' >> $var.html
-
+  echo "<div><script src=\"http://static.ak.fbcdn.net/connect.php/js/FB.Share\" type=\"text/javascript\"></script></div>" >> $var.html
 
   printf "%b\n" >> $var.html
   echo \</ul\> >> $var.html
