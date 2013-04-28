@@ -3,26 +3,23 @@
 #it goes through each and contructs an html file with the same name (but html extension)
 
 
-#for var in "$@"
-#do
-
-  echo \<HTML\> #> $var.html
-  echo \<HEAD\> #>> $var.html
-  echo \<link href=\"headline.css\"\ rel=\"stylesheet\"\ type=\"text/css\"\ media=\"screen\"/\> #>> $var.html
-  echo \</HEAD\> #>> $var.html
-  echo \<BODY bgColor=Black\> #>> $var.html
-  echo \<ul\ id=\"main\"\> #>> $var.html
+  echo \<HTML\>
+  echo \<HEAD\>
+  echo \<link href=\"headline.css\"\ rel=\"stylesheet\"\ type=\"text/css\"\ media=\"screen\"/\>
+  echo \</HEAD\>
+  echo \<BODY bgColor=Black\>
+  echo \<ul\ id=\"main\"\>
 
   #Here begins headline file manipulation
-  #cat $var | 
+  sed 's_^http://.*_~&\n&_g' | sed 's_^~http://.*_<div style=\"float: right; margin-left: 10px;\">\n <a name=\"fb\_share\" type=\"button\_count\" share\_url=\"&\" href=\"http://www.facebook.com/sharer.php\">Share</a></div>\n<div></div>\n_g' | \
+  sed 's_~http://_http://_g' | \
   sed 's_^http://_<li class=\"mainbar-element\"><a href=\"&_g' | sed 's_<a href.*_&\"_g' | sed 's_<a href.*_&>_g' | \
-  tr -d '\n' | sed 's_<_\n&_g' | sed 's_<a href.*_&</a></li>_g' #>> $var.html
+  tr -d '\n' | sed 's_<_\n&_g' | sed 's_<a href.*_&</a></li>_g'
+  echo "<div><script src=\"http://static.ak.fbcdn.net/connect.php/js/FB.Share\" type=\"text/javascript\"></script></div>"
+
+  printf "%b\n"
+  echo \</ul\>
+  echo \</BODY\>
+  echo \</HTML\>
 
 
-  printf "%b\n" #>> $var.html
-  echo \</ul\> #>> $var.html
-  echo \</BODY\> #>> $var.html
-  echo \</HTML\> #>> $var.html
-
-
-#done
