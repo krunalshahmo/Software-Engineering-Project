@@ -1,3 +1,0 @@
-<div id="fb_share_1" style="float: right; margin-left: 10px;">
-<a name="fb_share" type="button_count" share_url="HEADLINE URL HERE" href="http://www.facebook.com/sharer.php">Share</a></div>
-<div><script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script></div>
