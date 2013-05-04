@@ -15,7 +15,7 @@
   sed 's_~http://_http://_g' | \
   sed 's_^http://_<li class=\"mainbar-element\"><a href=\"&_g' | sed 's_<a href.*_&\"_g' | sed 's_<a href.*_&>_g' | \
   tr -d '\n' | sed 's_<_\n&_g' | sed 's_<a href.*_&</a></li>_g'
-  echo "<div><script src=\"http://static.ak.fbcdn.net/connect.php/js/FB.Share\" type=\"text/javascript\"></script></div>"
+  echo "<script src=\"http://static.ak.fbcdn.net/connect.php/js/FB.Share\" type=\"text/javascript\"></script>"
 
   printf "%b\n"
   echo \</ul\>

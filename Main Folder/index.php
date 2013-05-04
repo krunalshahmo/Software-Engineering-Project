@@ -108,7 +108,6 @@ $user = $facebook->getUser();
 <div id="ads" align="left">
   <form>
     <ul id="sidebar">
-      <input type="checkbox" name="check" onclick="toggle(this.form.check, 'index');" checked="checked" />
         <li id="index" class="sidebar-element" style="visibility:visible"><a href="index.php">Home</a></li>
         <li id="mynews" class="sidebar-element" style="visibility:visible"><a href="myNews.php" target="main">My News</a></li>
 
