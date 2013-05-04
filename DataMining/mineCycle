@@ -16,7 +16,11 @@ while [ 1 ]; do
   ./rssParse http://feeds.foxnews.com/foxnews/entertainment >> EntertainmentHeadlines
   ./rssParse http://syndication.eonline.com/syndication/feeds/rssfeeds/topstories.xml >> EntertainmentHeadlines
   ./rssParse http://www.npr.org/rss/rss.php?id=1039 > MusicHeadlines
-  ./HTMLconstruct ESPNHeadlines FinanceHeadlines WorldHeadlines EntertainmentHeadlines MusicHeadlines
+  ./HTMLconstruct ESPNHeadlines > ESPNHeadlines.html
+  ./HTMLconstruct FinanceHeadlines > FinanceHeadlines.html
+  ./HTMLconstruct WorldHeadlines > WorldHeadlines.html
+  ./HTMLconstruct EntertainmentHeadlines > EntertainmentHeadlines.html
+  ./HTMLconstruct MusicHeadlines > MusicHeadlines.html
   rm -rf ./cnncom
   rm -rf ./foxnewscom
   rm -rf ./nbcnewscom
