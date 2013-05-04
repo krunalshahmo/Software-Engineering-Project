@@ -7,6 +7,23 @@ body
 	text-align:center;
 }
 
+#partition1 {
+	float: left;
+	width: 200px;
+	height: 250px;
+	alignment-adjust: auto;
+	padding: 0px;
+}
+
+#partition2 {
+	float: left;
+	width: 300px;
+	height: 250px;
+	alignment-adjust: auto;
+	padding: 0px;
+}
+
+
 #form_container
 {
 	background: #FFF;
