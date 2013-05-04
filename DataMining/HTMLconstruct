@@ -1,11 +1,14 @@
 #!/bin/bash
 #This script takes headline files as arguments
-#it goes through each and contructs an html file with the same name (but html extension)
+#it goes through each and contructs an html file and outputs to stdout
+#This script takes one argument-the name of the html file the output wil become,
+#  this is necessary for the auto-refresh feature
 
 
   echo \<HTML\>
   echo \<HEAD\>
   echo \<link href=\"headline.css\"\ rel=\"stylesheet\"\ type=\"text/css\"\ media=\"screen\"/\>
+  echo \<meta\ http-equiv=\"refresh\"\ content=\"300\"\;URL=\"$1\"\>
   echo \</HEAD\>
   echo \<BODY bgColor=Black\>
   echo \<ul\ id=\"main\"\>

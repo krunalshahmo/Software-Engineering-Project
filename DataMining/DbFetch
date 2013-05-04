@@ -10,5 +10,5 @@
 
 
 echo "select feed1, feed2, feed3, feed4, feed5 from $4 where id = $5;" | mysql -u $2 -p$3 $1 | \
-tail -n 1 | sed 's_ _\\&_g' | tr '\t' ' ' | xargs ./rssParse | ./HTMLconstruct
+tail -n 1 | sed 's_ _\\&_g' | tr '\t' ' ' | xargs ./rssParse | ./HTMLconstruct myNews.php
 
