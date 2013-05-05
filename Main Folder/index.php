@@ -123,31 +123,31 @@ $user = $facebook->getUser();
              $sql="SELECT * FROM userPrefs where id='$user'";
              $result = mysqli_query($con,$sql);
              $result = mysqli_fetch_array($result);
-             if ($result['sports'] == '1')
+             if ($result['sports'] == '1' || !$user)
              {
                echo '<li id="sports" class="sidebar-element" style="visibility:visible"><a href="espn.html" target="main">Sports</a></li>';
              }
-             if ($result['finance'] == '1')
+             if ($result['finance'] == '1' || !$user)
              {
                echo '<li id="finance" class="sidebar-element" style="visibility:visible"><a href="finance.html" target="main">Finance</a></li>';
              }
-             if ($result['worldnews'] == '1')
+             if ($result['worldnews'] == '1' || !$user)
              {
                echo '<li id="worldnews" class="sidebar-element" style="visibility:visible"><a href="worldnews.html" target="main">World News</a></li>';
              }
-             if ($result['entertainment'] == '1')
+             if ($result['entertainment'] == '1' || !$user)
              {
                echo '<li id="entertainment" class="sidebar-element" style="visibility:visible"><a href="entertainment.html" target="main">Entertainment</a></li>';
              }
-             if ($result['music'] == '1')
+             if ($result['music'] == '1' || !$user)
              {
                echo '<li id="music" class="sidebar-element" style="visibility:visible"><a href="music.html" target="main">Music</a></li>';
              }
-             if ($result['weather'] == '1')
+             if ($result['weather'] == '1' || !$user)
              {
                echo '<li id="weather" class="sidebar-element" style="visibility:visible"><a href="weather.html" target="main">Weather</a></li>';
              }
-             if ($result['contact'] == '1')
+             if ($result['contact'] == '1' || !$user)
              {
                echo '<li class="sidebar-element" style="visibility:visible"><a href="contact.html" target="main">Contact Us</a></li>';
              }
