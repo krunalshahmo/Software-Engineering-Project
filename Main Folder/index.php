@@ -184,7 +184,7 @@ $user = $facebook->getUser();
 </div>
 
 <div id="footer">
-	&copy; 2013 Top News &bull;&nbsp;Developed by Krunal Shah, Landon Vance, Nick Kacena, Jakob Klinger
+	&copy; 2013 TopNews &bull;&nbsp;Developed by Landon Vance, Krunal Shah, Nick Kacena, Jakob Klinger
 </div>
 
 </div>
