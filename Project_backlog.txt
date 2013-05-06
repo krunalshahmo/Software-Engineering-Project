@@ -1,12 +1,13 @@
 Top News Web App:
 ______________________________________________________________________________
  
-Ideas:
-
--Pulls data from selected rss feeds, twitter, web sites (maybe?), etc...
--Customizable (user selects which feeds they want, drag and drop layout, sidebar menu, etc.)
--Genre selection (world news, local news, sports, finance, weather, etc...)
--Buttons: home, genre, contact, tutorial/FAQ, and search
+-Pulls data from rss feeds and relays it to website
+-Obtains the biggest picture on a specified website and displays it on the home page
+-Customizable genre selection and news feed for users (Facebook login)
+-Genres (world news, local news, sports, finance, weather, entertainment)
+-Loads article content in Iframe
+-Facebook share
+-Search bar
  
 Product Backlog:
 
@@ -37,25 +38,11 @@ Product Backlog:
 
 ------------------End of Second Sprint---Due April 8--------------------------
 
--Fix all browser compatibility issues ()
--Automatic refresh of headlines using AJAX ()
--Implement better search engine, not using third party service ()
--Fix espn content reload issue ()
--Rename espn.html to sports.html ()
--Auto-Refresh list of news when user scrolls down -infinite scroll AJAX?()
--Article contents in Iframe (JS Parsing) 
-
-
--login through facebook, twitter ()
--(genre.html) Retrieve and display data on click ()
--Resize iframe upon content display ()
--Add next button to display next 10 top news ()
--(index.html) Add user customizability to home page (Possible ideas: genre selection, drag & drop, favorites) ()
--Implement a way to save user customizability preferences (research cookies or login page) () 
--Static side bar (scrolls down as the user scrolls down) ()
--Add animation to side bar using jquery ()
--Add other interactive features - picture for each section, animation, etc. ()
--Create a mobile version of the website ()
-
+-Fix all browser compatibility issues (X)
+-Automatic refresh of headlines (X)
+-Login through Facebook (X)
+-Genre and News feed customization for users (X)
+-Implement Database user tables to store user preferences (X)
+-Animate the side bar using jquery (X)
 
 ------------------Finished Product----Due May 8-----------------------------
