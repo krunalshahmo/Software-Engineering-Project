@@ -3,7 +3,7 @@ _________________________________________________________________
 
 SUMMARY:
 
-TopNews is an interactive, user-friendly website that updates top news stories, per the user's preferences, every 20 minutes. The back end of the website pulls data from rss feeds, as well as obtains the biggest image on a specified website, and relays it to TopNews. By incorporating Facebook login, the user has the ability to customize their own genre selection as well as their own personal news feed. 
+TopNews is an interactive, user-friendly website that updates top news stories, per the user's preferences, every 20 minutes. The back end of the website pulls data from rss feeds, as well as obtains the biggest image on a specified website, and relays it to TopNews. By incorporating Facebook login with the database, the user has the ability to customize their own genres and news feeds. 
 
 ARCHITECTURE:
 
